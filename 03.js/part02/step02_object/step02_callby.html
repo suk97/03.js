@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step02_callby.html</title>
+</head>
+<body>
+    <script>
+        // 값에 의한 전달 ( 원시타입 ) : 불변 데이터
+        // Call by Value
+
+        let height = 175;
+        let number = height;
+
+        // console.log(height);
+        // console.log(number);
+        
+        // console.log(height === number);
+        
+        // 비교
+        height = 183;
+        
+        // console.log(height);
+        // console.log(number);
+        
+        // console.log(height === number);
+
+
+        // 참조에 의한 전달 ( 객체타입, 참조타입 ) : 가변 데이터
+        // Call by Reference
+        let person = {
+            name: "hi"
+        }
+        
+        let copyPerson = person;
+        
+        // console.log(person);
+        // console.log(copyPerson);
+        // console.log(person === copyPerson);
+        // 실제 내용 + 타입
+
+        // 복사한 객체의 정보를 변경
+        copyPerson.name = "hello";
+        // 그럼에도 같은 주소값을 참조하고 있기 때문에 person 역시 변경된 내용을 출력하게 된다.
+        // console.log(copyPerson); // dev
+        // console.log(person); // dev
+        // console.log(person === copyPerson);
+
+        // ex
+        let nums = [1, 2, 3, 4, 5];
+        console.log(nums);
+        
+        // 얕은 복사
+        let numbers = nums;
+        numbers[2] = 30;
+        
+        // console.log(numbers);
+        console.log(nums);
+
+        // 깊은 복사
+        let deepNumbers = [];
+        for(let i=0; i < nums.length; i++) {
+            deepNumbers[i] = nums[i];
+        }
+
+        console.log(deepNumbers);
+        
+        // nums & deepNumbers
+        deepNumbers[2] = 3;
+        console.log(deepNumbers);
+        
+        // nums ?
+        console.log(nums);
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

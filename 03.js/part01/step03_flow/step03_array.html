@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+    // https://developer.mozilla.org/ko/ 
+    
     // array : 배열, 일반적인 리터럴 데이터를 효율적으로 관리하기 위한 객체
     // 생성 : [ 요소1, 요소2, ... ]
 
@@ -81,6 +83,11 @@
 
     
     console.log('--- 0802 ---')
+
+
+
+
+    
     // find : 테스트 함수의 조건에 맞는 첫번째 요소 값을 반환
     let numbers = [1, 5, 6, 8];
     let even = numbers.find((item) => item%2==0);
@@ -176,7 +183,7 @@
         }
     ]
     // 3가지 item의 price 총합을 구하시오
-    let totalPrice = items.reduce((totalPrice, item) => totalPrice + item.price, 0);
+    let totalPrice = items.reduce((totalPrice, item) => totalPrice + item.price, 0); // 0 = accumulator 시작 값
     console.log(totalPrice);
 
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step04_class.html</title>
+</head>
+<body>
+    <script>
+        // function Animal() {
+        //     this.name = name;
+        //     this.speed = speed;
+        //     run = function(speed) {
+        //         console.log(this.speed+ "로 run() 실행");
+        //     }
+        //     stop = function(name) {
+            //         console.log(this.name+"이 멈춤 stop()");
+            //     };
+            // };
+            
+        class Animal {
+             // 생성자 : 객체 생성시, 프로퍼티 초기화
+            constructor() {
+                this.name = name;
+                this.speed = 0;
+             }
+            
+            // 메소드
+            run(speed) {
+                console.log(this.speed+ "로 run() 실행");
+            }
+            stop(speed) {
+                console.log(this.name+ "이 멈춤 stop()");
+            }
+
+        }
+
+        const animal = new Animal();
+
+        // extends
+        class Cat extends Animal {
+            sleep() {
+                console.log('12시간 이상 잠');
+            }
+        }
+
+
+
+
+        const cat = new Cat("navi");
+        console.log(cat);
+        cat.sleep()
+        cat.run()
+        cat.stop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

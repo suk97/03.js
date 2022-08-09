@@ -90,16 +90,28 @@
         // 중간에 빈 공백 혹은 줄바꿈은 textNode로 간주
         // console.log(document.childNodes[1].childNodes);
         
-        const result = document.getElementById('result');
-        console.log(result.previousSibling);
+        // const result = document.getElementById('result');
+        // console.log(result.previousSibling);
 
         // 내가 HTML 요소를 선택했는지, Node 접근했는지
         // 지정 방법에 따라 사용가능한 메소드가 달라진다
 
+            
+            // 버튼
+            const btnPlus = document.querySelector('#btn-plus');
+            const btnMinus = document.querySelector('#btn-minus');
+            const result = document.querySelector('#result');
 
+            btnPlus.addEventListener('click', () =>{
+                result.innerHTML = parseInt(result.innerHTML) + 1;
+            })
+            btnMinus.addEventListener('click', () =>{
+                result.innerHTML = parseInt(result.innerHTML) - 1;
+            })
+        </script>
+    </body>
 
-
-
+</html>
 
 
 

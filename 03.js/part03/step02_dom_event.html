@@ -39,8 +39,24 @@
     <input type="email" name="email" id="email">
     <div id="invalid"></div>
     <div id="output"></div>
+    
+    <hr>
+    <h3>대문자만 입력</h3>
+    <div>
+        <label for="coupon">쿠폰입력</label>
+        <input type="text" id="coupon">
+    </div>
 
     <script>
+        //
+        const coupon = document.getElementById('coupon');
+        coupon.addEventListener('keyup', () => {
+            console.log(coupon.value.toUpperCase());
+            coupon.value = coupon.value.toUpperCase();
+        });
+
+
+
         const sub = document.getElementById('sub');
         const check = document.querySelector('#check');
         // step01 인라인 방식
@@ -115,23 +131,11 @@
             }
             email.style.background ='';
             output.innerHTML = '';
-        })
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        // keyboard
+        // keydown,keyup, ...
 
 
 
